@@ -1,0 +1,348 @@
+/*Este import es para agregar unos estilos de funte mi amor*/
+
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Concert+One&family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap');
+
+/*Esto es para quitar márgenes por defecto mi amor*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Aquí agregue el diseño de letra y el tamaño de cada contenedor mi amor*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  text-align: center;
+}
+
+/*slider significa control deslizante mi amor, aquí le agregue unos márgenes y posición al alto y ancho del contenedor mi amor*/
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+/*a left se refiere al diseño de la parte izquierda mi amor,
+aquí esta el color de letra y la posición del texto y así mi amor*/
+
+.left-slide {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.left-slide > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.left-slide h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+/*Esto es para la parte derecha mi amor, donde estan las imágenes*/
+
+.right-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.right-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+/*este botón es para el diseño de los botones que hacen que suba y baje mi amor*/
+
+button {
+  background-color: #fff;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
+}
+
+/*Este hover lo use para que al pasar el cursor por la flecha se ponga de color negrito mi amor*/
+
+button:hover {
+  color: #222;
+}
+
+button:focus {
+  outline: none;
+}
+
+/*Aquí le puse los márgen que hacen que las flechitas esten en la posición que están mi amor*/
+
+.slider-container .action-buttons button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+
+/*el transform hace que el botón derecho este abajito y el otro
+transform hace que el otro botón este más arriba mi amor*/
+
+.slider-container .action-buttons .down-button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.slider-container .action-buttons .up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/*Esto es para el diseño de los títulos mi amor*/
+
+h1 {
+  font-family: 'Coiny', cursive;
+}
+
+/*Este es el diseño del botón de primavera mi amor*/
+
+.btnspring {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  border-bottom: 2px rgb(121, 5, 121) solid;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 30px;
+  overflow: hidden;
+  margin: 10px 0;
+  margin-top: 25px;
+  position: relative;
+  border-radius: 50px;
+}
+
+.btnspring:hover {
+  background: linear-gradient(90deg, #7b62e9, #ff72c0);
+  color: white;
+}
+
+button:focus {
+  outline: none;
+}
+
+button .circle {
+  position: absolute;
+  background-color: #292626;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+
+/*Esto hace que al presionar el color negrito se vea circular mi amor*/
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+/*Este es para el botón de verano mi amor*/
+
+.btnSummer {
+    background-color:#ffde2133;
+    border-radius:50px;
+    border:1px solid #000000;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family: 'Concert One', cursive;
+    font-size:35px;
+    padding:15px 30px;
+    margin-top: 30px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+}
+
+.btnSummer:hover {
+    background-color:#ffffff;
+  }
+
+.btnSummer:active {
+    position:relative;
+    top:1px;
+  }
+
+  .heart {
+    color: red;
+    font-size: 30px;
+  }
+
+  .heart:hover {
+    color: rgb(0, 200, 255);
+  }
+/*Esto es para el botón de otoño mi amor*/
+
+.btnAutumn{
+  font-family: 'Concert One', cursive;
+  font-weight: 0;
+  font-size: 26px;
+  color: #fff;
+  background-color: #e93e3ea9; 
+  padding: 30px 30px;
+  border: 2px solid #ffffff;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 50px;
+  transition : 1000ms;
+  transform: translateY(0);
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.btnAutumn:hover{
+  transition : 1000ms;
+  padding: 15px 50px;
+  transform : translateY(-0px);
+  background-color: #fff;
+  color: #000000;
+  border: solid 2px #000000;
+}
+
+/*esto es para cambiar de color el texto que yo quiera en negrito mi amor*/
+
+.black {
+  color: black;
+}
+
+/*estp es para el botón de invierno mi amor*/
+
+.btnWinter {
+  font-family: 'Concert One', cursive;
+  font-size: 1.3em;
+  min-width: 130px;
+  height: 40px;
+  padding: 5px 35px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+  z-index: 0;
+  margin-top: 40px;
+}
+
+.btnWinter:hover:after {
+  top: 0;
+  left: 0;
+}
+
+.btnWinter:after {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 5px;
+  transition: 0.2s;
+  background-color: #60a7e2;
+}
+
+@media only screen and (max-width: 867px) {
+  .left-slide {
+    height: 100%;
+    width: 72%;
+    transition: transform 0.5s ease-in-out;
+  }
+  .left-slide > div {
+    height: 100%;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    z-index: -1;
+  }
+  .left-slide p{
+    margin-top: -20px;
+    width: 130px;
+  }
+  .left-slide h1 {
+    font-size: 25px;
+    margin-bottom: 24px;
+  }  
+  .right-slide {
+    height: 100%;
+    top: 0px;
+    width: 85%;
+    left: 50%;
+    transition: transform 0.5s ease-in-out;
+  }
+  .right-slide > div:hover {
+    height: 100%;
+    width: 70%;
+    transition: 1s cubic-bezier(0.1,0.1,0.1,0.1);
+    scroll-behavior: smooth;
+  }
+  .slider-container .action-buttons button {
+    left: 50%;
+    top: 50%;
+  }
+  .btnspring {
+    font-size: 14px;
+    padding: 15px 20px;
+    margin-left: -6px;
+  }
+  .btnSummer{
+    font-size: 29px;
+    padding: 5px 25px;
+    margin-left: -5px;
+  }
+  .btnAutumn{
+    padding: 10px 10px;
+    font-size: 15px;
+    text-align: center;
+    align-content: center;
+    margin-top: 20px;
+    margin-left: -10px;
+  }
+  .btnWinter{
+    font-size: 20px;
+    padding: 1px 13px;
+    margin-top: 20px;
+    margin-left: -5px;
+  }
+  button {
+    background-color: #ffffffd3;
+    color: #aaaaaac7;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+}
